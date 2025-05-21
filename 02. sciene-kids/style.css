@@ -1,0 +1,44 @@
+:root {
+    --primary-color: #4BB4DE;
+    --secondary-color: #2A9D8F;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.hero {
+    background-color: var(--primary-color) !important;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--primary-color);
+}
+
+.nav-pills .nav-link {
+    color: var(--primary-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
