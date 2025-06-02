@@ -36,33 +36,10 @@ header p {
   color: #666;
 }
 
-.scroll-down {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: bounce 2s infinite;
-}
-
 .scroll-down svg {
   fill: #333;
 }
 
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-20px);
-  }
-  60% {
-    transform: translateY(-10px);
-  }
-}
 
 /* Sections */
 section {
@@ -81,23 +58,35 @@ h2 {
 
 /* About */
 .about-content {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+  text-align: justify;
+  font-size: 0; /* Loại bỏ khoảng trắng giữa inline-block */
+}
+
+.about-content::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
 }
 
 .about-text {
-  flex: 1;
+  display: inline-block;
+  width: 60%;
+  font-size: 16px;
+  text-align: left;
+  margin: auto 0px;
+
 }
 
 .about-image {
-  flex: 1;
+  display: inline-block;
+  width: 38%;
+  font-size: 16px;
   text-align: center;
 }
 
 .profile-img {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -142,12 +131,6 @@ h2 {
   margin-bottom: 1rem;
 }
 
-/* Projects */
-/* .project-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-} */
 
 .project-space {
   text-align: justify;
@@ -168,7 +151,7 @@ h2 {
   transition: transform 0.3s ease;
   cursor: pointer;
 
-  /* Xử lý dàn hàng không grid */
+  /* Xử lý dàn hàng */
   font-size: 16px;
   display: inline-block;
   width: 48%;
@@ -277,12 +260,6 @@ footer {
     height: 200px;
     margin: 30px 0;
   }
-
-  /* Không sử dụng Grid nữa nên cân nhắc thay đổi */
-  /* .experience-grid,
-  .project-grid {
-    grid-template-columns: 1fr;
-  } */
 
   .line {
     width: 50px;
